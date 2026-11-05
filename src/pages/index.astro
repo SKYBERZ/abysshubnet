@@ -1,0 +1,187 @@
+---
+import "../styles/global.css";
+
+const year = new Date().getFullYear();
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#080b10" />
+    <meta name="description" content="Abyss Hub is an independent technology hub bringing together digital projects, tools, and communities." />
+    <title>Abyss Hub — Explore Beyond</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="container nav" aria-label="Main navigation">
+        <a class="brand" href="#home" aria-label="Abyss Hub home">
+          <span class="brand-mark">A</span><span>Abyss Hub</span>
+        </a>
+        <div class="nav-links" id="nav-links">
+          <a href="#about">About</a>
+          <a href="#services">What we do</a>
+          <a href="#projects">Projects</a>
+          <a href="#community">Community</a>
+        </div>
+        <a class="nav-cta" href="#contact">Get in touch <span aria-hidden="true">↗</span></a>
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="container">
+          <div class="hero-content">
+            <span class="eyebrow">Independent technology hub</span>
+            <h1>Explore beyond.<br /><span>Build what’s next.</span></h1>
+            <p class="hero-copy">
+              Abyss Hub is a home for digital ideas, experimental tools, and independent projects.
+              We bring technology and creativity together to turn curiosity into things people can explore.
+            </p>
+            <div class="hero-actions">
+              <a class="button" href="#projects">Explore our projects <span aria-hidden="true">→</span></a>
+              <a class="button secondary" href="#about">Discover Abyss Hub</a>
+            </div>
+            <div class="hero-note"><span class="status-dot"></span> A growing collection of independent projects</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="container about-grid">
+          <div>
+            <span class="eyebrow">About Abyss Hub</span>
+            <div class="section-heading">
+              <h2>A space for ideas to become real projects.</h2>
+              <p>One hub. Different directions. A shared curiosity for technology.</p>
+            </div>
+            <div class="about-copy">
+              <p>Abyss Hub brings together projects across software, digital services, and online communities. Each project has its own purpose and identity, while sharing a place to be discovered.</p>
+              <p>We value practical experimentation, thoughtful design, and making technology approachable. Some projects are actively evolving; others are still taking shape.</p>
+            </div>
+          </div>
+          <aside class="value-panel">
+            <h3>What guides us</h3>
+            <div class="value-row">
+              <span class="value-icon" aria-hidden="true">⌘</span>
+              <div><strong>Build with purpose</strong><p>Create useful experiences instead of adding complexity for its own sake.</p></div>
+            </div>
+            <div class="value-row">
+              <span class="value-icon" aria-hidden="true">◈</span>
+              <div><strong>Stay curious</strong><p>Explore ideas, learn through experiments, and keep improving.</p></div>
+            </div>
+            <div class="value-row">
+              <span class="value-icon" aria-hidden="true">◎</span>
+              <div><strong>Grow together</strong><p>Make room for people to discover projects and connect with their communities.</p></div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="services">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">What we do</span>
+            <h2>Different fields. One place to explore.</h2>
+            <p>Abyss Hub is an umbrella for independent work across several areas of technology and digital creativity.</p>
+          </div>
+          <div class="services-grid">
+            <article class="info-card"><span class="card-icon" aria-hidden="true">⌘</span><h3>Software & tools</h3><p>Building software, utilities, and experiments that solve focused problems.</p></article>
+            <article class="info-card"><span class="card-icon" aria-hidden="true">◇</span><h3>Digital platforms</h3><p>Exploring online services and web experiences for different communities.</p></article>
+            <article class="info-card"><span class="card-icon" aria-hidden="true">▧</span><h3>Games & creativity</h3><p>Creating and experimenting with interactive projects and game experiences.</p></article>
+            <article class="info-card"><span class="card-icon" aria-hidden="true">◎</span><h3>Community</h3><p>Connecting people with projects, updates, and places to participate.</p></article>
+            <article class="info-card"><span class="card-icon" aria-hidden="true">⌁</span><h3>Research & exploration</h3><p>Learning, testing ideas, and developing new directions through experimentation.</p></article>
+            <article class="info-card"><span class="card-icon" aria-hidden="true">↗</span><h3>Independent projects</h3><p>A shared home for projects that grow at their own pace and in their own way.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">Selected projects</span>
+            <h2>Made under the Abyss Hub umbrella.</h2>
+            <p>Explore a selection of projects in the ecosystem. Availability and development status may differ by project.</p>
+          </div>
+          <div class="projects-grid">
+            <article class="project-card">
+              <div class="project-top"><span class="project-type">Digital currency project</span><span class="project-status">In development</span></div>
+              <h3>VoidXpay (VPX)</h3>
+              <p>A crypto-inspired digital currency and ecosystem project exploring wallets, network tools, exchange features, and community-built applications.</p>
+              <a class="project-link" href="https://github.com/SKYBERZ" target="_blank" rel="noreferrer">Explore development ↗</a>
+            </article>
+            <article class="project-card">
+              <div class="project-top"><span class="project-type">Software</span><span class="project-status">Beta</span></div>
+              <h3>SkyOSINT</h3>
+              <p>An open-source OSINT-focused software project, with development and updates hosted on GitHub.</p>
+              <a class="project-link" href="https://github.com/SKYBERZ/SkyOSINT" target="_blank" rel="noreferrer">View on GitHub ↗</a>
+            </article>
+            <article class="project-card">
+              <div class="project-top"><span class="project-type">E-commerce</span><span class="project-status">Online project</span></div>
+              <h3>Adiwarna Marble</h3>
+              <p>A dedicated online storefront project for marble-related products and services.</p>
+              <a class="project-link" href="https://adiwarna.abysshubnet.xyz" target="_blank" rel="noreferrer">Visit website ↗</a>
+            </article>
+            <article class="project-card">
+              <div class="project-top"><span class="project-type">Gaming</span><span class="project-status">Ongoing</span></div>
+              <h3>Roblox projects</h3>
+              <p>A collection of Roblox experiences and experiments, including interactive game and product concepts.</p>
+              <a class="project-link" href="https://www.roblox.com/games/114494654794239" target="_blank" rel="noreferrer">Explore on Roblox ↗</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="community">
+        <div class="container">
+          <div class="community">
+            <div>
+              <span class="eyebrow">Join the community</span>
+              <h2>Stay connected to what’s being built.</h2>
+              <p>Follow the wider Abyss Hub community for announcements and discover the dedicated spaces for individual projects.</p>
+            </div>
+            <a class="button" href="https://discord.gg/JszuX2z2F8" target="_blank" rel="noreferrer">Join our Discord <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">Contact</span>
+            <h2>Have a question or an idea?</h2>
+            <p>For general enquiries and community conversations, reach out through the Abyss Hub Discord.</p>
+            <div class="contact-line">
+              <a class="button" href="https://discord.gg/JszuX2z2F8" target="_blank" rel="noreferrer">Contact via Discord ↗</a>
+              <a class="button secondary" href="https://github.com/SKYBERZ" target="_blank" rel="noreferrer">GitHub profile ↗</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <a class="brand" href="#home"><span class="brand-mark">A</span><span>Abyss Hub</span></a>
+        <span>© {year} Abyss Hub. Built with curiosity.</span>
+        <div class="footer-links"><a href="https://github.com/SKYBERZ" target="_blank" rel="noreferrer">GitHub</a><a href="https://discord.gg/JszuX2z2F8" target="_blank" rel="noreferrer">Discord</a></div>
+      </div>
+    </footer>
+    <script>
+      const toggle = document.querySelector("#menu-toggle");
+      const links = document.querySelector("#nav-links");
+      toggle?.addEventListener("click", () => {
+        const isOpen = links?.classList.toggle("open") ?? false;
+        toggle.setAttribute("aria-expanded", String(isOpen));
+      });
+      links?.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          links.classList.remove("open");
+          toggle?.setAttribute("aria-expanded", "false");
+        });
+      });
+    </script>
+  </body>
+</html>
