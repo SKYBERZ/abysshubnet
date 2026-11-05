@@ -1,0 +1,15 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+const services = [
+["Digital product development","Planning and building focused digital products, from early concepts through ongoing refinement."],
+["Software & tooling","Developing practical software tools and utilities with an emphasis on usability and maintainable foundations."],
+["Web platforms & experiences","Creating clear, responsive web experiences for products, services, and digital communities."],
+["Technology research & prototyping","Exploring technical ideas, validating concepts, and turning promising experiments into practical directions."],
+["Product ecosystem development","Connecting products, services, and supporting tools into coherent digital ecosystems."]
+];
+---
+<SiteLayout title="Services — Abyss Hub" description="Explore the digital product, software, platform, and technology development capabilities of Abyss Hub." active="services">
+<section class="page-hero"><div class="container"><span class="eyebrow">What we do</span><h1>Technology shaped<br /><span class="gradient-text">around real purpose.</span></h1><p>We focus on creating and improving digital products, software, and online experiences with clear direction and practical value.</p></div></section>
+<section class="section"><div class="container"><div class="section-head"><span class="eyebrow">Capabilities</span><h2>Areas of focus.</h2><p>Our work spans a range of technology disciplines. The scope of each engagement is shaped around its goals and requirements.</p></div><div class="cards">{services.map((s,i)=><article class="card"><span class="card-kicker">0{i+1} / CAPABILITY</span><h3>{s[0]}</h3><p>{s[1]}</p></article>)}</div></div></section>
+<section class="section"><div class="container cta-band"><div><span class="eyebrow">Have a project?</span><h2>Let's define what comes next.</h2><p>Tell us what you are looking to build or improve, and we can start a conversation.</p></div><a class="button" href="/contact">Discuss a project ↗</a></div></section>
+</SiteLayout>

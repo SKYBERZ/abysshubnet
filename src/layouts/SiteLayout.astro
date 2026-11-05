@@ -1,0 +1,85 @@
+---
+import "../styles/company.css";
+
+const {
+  title = "Abyss Hub — Technology, built with intent",
+  description = "Abyss Hub develops independent digital products, software, and technology projects.",
+  active = "",
+} = Astro.props;
+const year = new Date().getFullYear();
+const nav = [
+  { label: "About", href: "/about", key: "about" },
+  { label: "Services", href: "/services", key: "services" },
+  { label: "Projects", href: "/projects", key: "projects" },
+  { label: "Partnerships", href: "/partnerships", key: "partnerships" },
+];
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#080d19" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/png" href="/abysshub-logo.png" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <nav class="container nav" aria-label="Main navigation">
+          <a class="brand" href="/" aria-label="Abyss Hub home">
+            <img src="/abysshub-logo.png" alt="" class="brand-logo" />
+            <span class="brand-name">ABYSS <b>HUB</b></span>
+          </a>
+          <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+            <span></span><span></span><span></span><span class="sr-only">Toggle navigation</span>
+          </button>
+          <div class="nav-links" id="nav-links">
+            {nav.map((item) => (
+              <a href={item.href} class:list={[active === item.key && "active"]} aria-current={active === item.key ? "page" : undefined}>{item.label}</a>
+            ))}
+          </div>
+          <a class="nav-cta" href="/contact">Let's talk <span aria-hidden="true">↗</span></a>
+        </nav>
+      </header>
+      <main><slot /></main>
+      <footer class="site-footer">
+        <div class="container footer-main">
+          <div class="footer-brand">
+            <a class="brand" href="/">
+              <img src="/abysshub-logo.png" alt="" class="brand-logo" />
+              <span class="brand-name">ABYSS <b>HUB</b></span>
+            </a>
+            <p>Independent technology. Thoughtfully built.</p>
+          </div>
+          <div class="footer-nav">
+            <span class="footer-label">Explore</span>
+            <a href="/about">About</a><a href="/services">Services</a><a href="/projects">Projects</a>
+          </div>
+          <div class="footer-nav">
+            <span class="footer-label">Connect</span>
+            <a href="/partnerships">Partnerships</a><a href="/contact">Contact</a>
+            <a href="mailto:skyberz21ans@gmail.com">Email us</a>
+          </div>
+        </div>
+        <div class="container footer-bottom">
+          <span>© {year} Abyss Hub. All rights reserved.</span>
+          <span>Built with intent <i aria-hidden="true">✳</i></span>
+        </div>
+      </footer>
+    </div>
+    <script>
+      const toggle = document.querySelector("#menu-toggle");
+      const links = document.querySelector("#nav-links");
+      toggle?.addEventListener("click", () => {
+        const open = links?.classList.toggle("open") ?? false;
+        toggle.setAttribute("aria-expanded", String(open));
+      });
+      links?.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => {
+        links.classList.remove("open");
+        toggle?.setAttribute("aria-expanded", "false");
+      }));
+    </script>
+  </body>
+</html>

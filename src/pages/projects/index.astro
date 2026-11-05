@@ -1,0 +1,12 @@
+---
+import SiteLayout from "../../layouts/SiteLayout.astro";
+const projects = [
+{name:"Adiwarna",type:"Digital project",status:"Live",desc:"A live project with a dedicated online destination and its own product identity.",href:"/projects/adiwarna"},
+{name:"VoidXpay (VPX)",type:"Digital currency & fintech",status:"In development",desc:"A digital currency initiative exploring wallet infrastructure, exchange functionality, developer tools, and an ecosystem of applications.",href:"/projects/vpx"},
+{name:"Abyss Minecraft Server",type:"Minecraft server",status:"Planning",desc:"A planned Minecraft multiplayer experience currently in its early planning stage. Further details will be announced as the project takes shape.",href:"/projects/minecraft-server"}
+];
+---
+<SiteLayout title="Projects — Abyss Hub" description="Discover digital products and technology projects developed under Abyss Hub." active="projects">
+<section class="page-hero"><div class="container"><span class="eyebrow">Our portfolio</span><h1>Independent projects.<br /><span class="gradient-text">One shared direction.</span></h1><p>Explore the products and initiatives developed under Abyss Hub. Each project has its own focus, identity, and pace of development.</p></div></section>
+<section class="section"><div class="container"><div class="cards">{projects.map((p)=><article class="card project-card"><div class="project-meta"><span class="card-kicker">{p.type}</span><span class="status">{p.status}</span></div><h3>{p.name}</h3><p>{p.desc}</p><a class="card-link" href={p.href}>Explore project →</a></article>)}</div></div></section>
+</SiteLayout>
