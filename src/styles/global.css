@@ -48,7 +48,9 @@ button { font: inherit; }
   background: rgba(8, 11, 16, .78); backdrop-filter: blur(18px);
 }
 .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-.brand { display: inline-flex; align-items: center; gap: 11px; font: 700 1.05rem "Space Grotesk", sans-serif; letter-spacing: -.03em; }
+.brand { display: inline-flex; align-items: center; flex: 0 0 auto; }
+.brand-logo { display: block; width: 68px; height: 68px; object-fit: contain; }
+.footer-inner .brand-logo { width: 58px; height: 58px; }
 .brand-mark {
   width: 34px; height: 34px; display: grid; place-items: center; border-radius: 11px;
   color: #dcecff; font: 700 1rem "Space Grotesk", sans-serif;
